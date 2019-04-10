@@ -6,11 +6,14 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\\   ^__^");
-            Console.WriteLine(" \\  (oo)\\_______");
-            Console.WriteLine("    (__)\\       )\\/\\");
-            Console.WriteLine("      ||----w |");
-            Console.WriteLine("      ||     ||");
+            Console.WriteLine("    .--.");
+            Console.WriteLine("   |o_o |");
+            Console.WriteLine("   |:_/ | ");
+            Console.WriteLine("  //   \\ \\");
+            Console.WriteLine(" (|     | )");
+            Console.WriteLine("/'\\_   _/'\\");
+            Console.WriteLine("\\___)=(___/");
+
 
             Console.ReadLine();
         }
