@@ -6,14 +6,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("    .--.");
-            Console.WriteLine("   |o_o |");
-            Console.WriteLine("   |:_/ | ");
-            Console.WriteLine("  //   \\ \\");
-            Console.WriteLine(" (|     | )");
-            Console.WriteLine("/'\\_   _/'\\");
-            Console.WriteLine("\\___)=(___/");
-
+            string spel;
+            Console.WriteLine("Wat is jou leukste computerspel?");
+            spel = Console.ReadLine();
+            Console.WriteLine("Jou leukste computer spel is " + spel);
 
             Console.ReadLine();
         }
