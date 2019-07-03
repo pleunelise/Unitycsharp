@@ -6,18 +6,21 @@ namespace Boodschappen
     {
         static void Main(string[] args)
         {
-            string product1 = "Koffie";
-            string product2 = "Melk";
-            string product3 = "Limonade";
-            string product4 = "Snoep";
-            string product5 = "Chips";
-            string product6 = "Chocolade";
-            string product7 = "Koekjes";
-            string product8 = "Water";
-            string product9 = "Paprika";
-            string product10 = "Komkommer";
+            const string product1 = "Koffie";
+            const string product2 = "Melk";
+            const string product3 = "Limonade";
+            const string product4 = "Snoep";
+            const string product5 = "Chips";
+            const string product6 = "Chocolade";
+            const string product7 = "Koekjes";
+            const string product8 = "Water";
+            const string product9 = "Paprika";
+            const string product10 = "Komkommer";
+            string header = "====================";
 
-            int aantal;
+            float totaal = 0.0f;
+            float prijs = 0.0f;
+            float prijsExclBtw = 0.0f;
             float prijsExclBtw1 = 3.95f;
             float prijsExclBtw2 = 2.95f;
             float prijsExclBtw3 = 1.95f;
@@ -28,26 +31,110 @@ namespace Boodschappen
             float prijsExclBtw8 = 0.95f;
             float prijsExclBtw9 = 1.90f;
             float prijsExclBtw10 = 1.05f;
-            float btwPercentage = 0.21f;
-           
-            Console.WriteLine("Een pak " + product1 + " kost " + prijsExclBtw1 + " ex btw.");
-            Console.WriteLine("Een pak " + product2 + " kost " + prijsExclBtw2 + " ex btw.");
-            Console.WriteLine("Een fles " + product3 + " kost " + prijsExclBtw3 + " ex btw.");
-            Console.WriteLine("Een zakje " + product4 + " kost " + prijsExclBtw4 + " ex btw.");
-            Console.WriteLine("Een zak " + product5 + " kost " + prijsExclBtw5 + " ex btw.");
-            Console.WriteLine("Een reep " + product6 + " kost " + prijsExclBtw6 + " ex btw.");
-            Console.WriteLine("Een pak " + product7 + " kost " + prijsExclBtw7 + " ex btw.");
-            Console.WriteLine("Een fles " + product8 + " kost " + prijsExclBtw8 + " ex btw.");
-            Console.WriteLine("Een " + product9 + " kost " + prijsExclBtw9 + " ex btw.");
-            Console.WriteLine("Een " + product10 + " kost " + prijsExclBtw10 + " ex btw.");
+            const float btwPercentage = 0.21f;
 
-            Console.WriteLine("Voer een aantal in: ");
+            Console.WriteLine(header);
+            Console.WriteLine(product1 + " = " + prijsExclBtw1);
+            Console.WriteLine(product2 + " = " + prijsExclBtw2);
+            Console.WriteLine(product3 + " = " + prijsExclBtw3);
+            Console.WriteLine(product4 + " = " + prijsExclBtw4);
+            Console.WriteLine(product5 + " = " + prijsExclBtw5);
+            Console.WriteLine(product6 + " = " + prijsExclBtw6);
+            Console.WriteLine(product7 + " = " + prijsExclBtw7);
+            Console.WriteLine(product8 + " = " + prijsExclBtw8);
+            Console.WriteLine(product9 + " = " + prijsExclBtw9);
+            Console.WriteLine(product10 + " = " + prijsExclBtw10);
+            Console.WriteLine(header);
 
-            aantal = Convert.ToInt32(Console.ReadLine());
-            float totaalPrijs = aantal * prijsExclBtw1 + (aantal * prijsExclBtw1) * btwPercentage;
+            for (int teller = 1; teller <= 3; teller++)
+            {
+                Console.WriteLine("Kies een product:");
+                string product = Console.ReadLine();
+                Console.WriteLine(header);
+                Console.WriteLine("Hoeveel " + product + " wil je?");
+                int aantal = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(aantal + " pakken " + product1 + " kost in totaal " + totaalPrijs);
-
+                switch (product)
+                {
+                case "Koffie":
+                    prijs = aantal * prijsExclBtw1 + (aantal * prijsExclBtw1) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw1, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Melk":
+                    prijs = aantal * prijsExclBtw2 + (aantal * prijsExclBtw2) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw2, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Limonade":
+                    prijs = aantal * prijsExclBtw3 + (aantal * prijsExclBtw3) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw3, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Snoep":
+                    prijs = aantal * prijsExclBtw4 + (aantal * prijsExclBtw4) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw4, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Chips":
+                    prijs = aantal * prijsExclBtw5 + (aantal * prijsExclBtw5) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw5, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Chocolade":
+                    prijs = aantal * prijsExclBtw6 + (aantal * prijsExclBtw6) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw6, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Koekjes":
+                    prijs = aantal * prijsExclBtw7 + (aantal * prijsExclBtw7) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw7, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Water":
+                    prijs = aantal * prijsExclBtw8 + (aantal * prijsExclBtw8) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw8, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Paprika":
+                    prijs = aantal * prijsExclBtw9 + (aantal * prijsExclBtw9) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw9, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                case "Komkommer":
+                    prijs = aantal * prijsExclBtw10 + (aantal * prijsExclBtw10) * btwPercentage;
+                    prijsExclBtw = getBTW(product, aantal, prijsExclBtw10, btwPercentage);
+                    Console.WriteLine(header);
+                    Console.WriteLine("Prijs inclusief BTW: " + prijs + " euro");
+                    break;
+                default :
+                    Console.WriteLine("!!dit product is niet beschikbaar!!");
+                    break;
+                }
+                Console.WriteLine(header);
+                totaal = prijs + totaal;
+                Console.WriteLine("Dit kost in totaal: " + totaal + " euro");
+                Console.WriteLine(header);  
+            }
+            
+        }
+        public static float getBTW(string product, int aantal, float prijsExclBtw, float btwPercentage)
+        {
+            float btw = 0.0f;
+            btw = (aantal * prijsExclBtw + (aantal * prijsExclBtw) * btwPercentage) - (aantal * prijsExclBtw);
+            Console.WriteLine("De btw: " + btw + " euro");
+            return btw;
+                
+               
         }
     }
 }

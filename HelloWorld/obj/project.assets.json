@@ -688,30 +688,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pleun\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/pleun/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pleun\\school\\coderclass\\Unitycsharp\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "/home/pleun/coderclass/Csharp/Unitycsharp/HelloWorld/HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "C:\\Users\\Pleun\\school\\coderclass\\Unitycsharp\\HelloWorld\\HelloWorld.csproj",
-      "packagesPath": "C:\\Users\\Pleun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pleun\\school\\coderclass\\Unitycsharp\\HelloWorld\\obj\\",
+      "projectPath": "/home/pleun/coderclass/Csharp/Unitycsharp/HelloWorld/HelloWorld.csproj",
+      "packagesPath": "/home/pleun/.nuget/packages/",
+      "outputPath": "/home/pleun/coderclass/Csharp/Unitycsharp/HelloWorld/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pleun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/pleun/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -729,6 +727,7 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
